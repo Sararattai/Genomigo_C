@@ -1,0 +1,14 @@
+1. Read and parse User Records
+	Read one line
+	Loop through each character and identify the individual tokens seperated by comma (,)
+
+	Tokens are as follows:
+		Identifier - one or more characters.  
+					The first character is an alphabet or _ 
+					the second and subsequent characters are alphabet, number or _
+
+		Name - one or more characters of alphabets.  
+		Number - one or more characters of digit
+		date - the date is in the form of yyyy/mm/dd (4 digit year / 2 digit month / 2 digit date)
+
+		
