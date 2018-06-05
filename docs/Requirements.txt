@@ -1,14 +1,30 @@
-1. Read and parse User Records
-	Read one line
-	Loop through each character and identify the individual tokens seperated by comma (,)
+=============================
+Symbol Table - Requirement
+=============================
 
-	Tokens are as follows:
-		Identifier - one or more characters.  
-					The first character is an alphabet or _ 
-					the second and subsequent characters are alphabet, number or _
+1. Introduction
+	The objective project is to create a Symbol Table (lookup table) to identify valid symbols versus unknown symbols.  
 
-		Name - one or more characters of alphabets.  
-		Number - one or more characters of digit
-		date - the date is in the form of yyyy/mm/dd (4 digit year / 2 digit month / 2 digit date)
 
-		
+2. Functional Requirement
+	The application reads a User.csv file and provides a Symbol table to lookup for a User based on First Name and Last Name.  The Symbol table is just a hash table with the key UserId and value as the User record. 
+
+	The application reads a csv file (eg., AutoSomol_1000.csv) and provides the record for the userId (eg., 1000).  The userId is the suffix of the file name. 
+	
+	AutoSomol need to keep another Symbol table providing mapping from UserId to AutoSomol record.
+
+3. Input & sample data
+	The input is given two different format, as follows.
+	1. User profile - Contains user profile information with UserId as unique key
+	2. AutoSomo_<UserId>.csv - Contains the AutoSomo for every user.
+
+	The input data is provided as the following sample files
+		User.csv
+		AutoSomo_1000.csv
+
+
+4. Output & sample data
+	The AutoSomo_1000.csv contains the value Position at the 3rd column.  It is a increasing value through out the file.
+	The application need to accept an input, a number.  The input number is a position that falls within the range of 2 position columns in the AutoSomo records. 
+	The output is those range of AutoSomo records.  The output also, expected to print the 	 User record details 
+

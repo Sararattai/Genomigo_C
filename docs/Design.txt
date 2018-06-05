@@ -1,0 +1,34 @@
+
+=============================
+Symbol Table - Design
+=============================
+
+1. Introduction 
+This document captures the design of the requirements and functional specification documented in requirements.docx and FunctionalSpec.docx
+
+2. Recognize a text line content
+
+
+
+2.1. Lexical Analyzer
+
+Read and parse User Records
+	Read one line
+		Read one character at a time
+
+	Loop through each character and identify the individual tokens seperated by comma (,) or space
+
+
+
+2. Parser
+The parser phase constructs a SymbolTable and other artifacts.
+
+In a SymbolTable, a symbol is used as a key and the metadata such as its length, along with its metrics are stored as value.
+
+
+
+
+
+
+		
+

@@ -1,0 +1,66 @@
+Symbol Table - Functional Spec
+=============================
+
+1. Introduction
+
+This document captures the Functional Spec to meet the requirements sepcified in Requirements.txt
+
+The input text lines would be converted into records.
+
+A User record is an instance of the 'struct User' and a AutoSomo is an instance of the 'struct AutoSomo'
+
+2.1 Input 
+An input to the program is a text line. 
+
+A text line contains different kinds of data such as following
+	1. User Profile:
+		Header - First Name, Last Name, Address, City, State, Zip, DOB
+		A sample line is - John,Li,Jacaranda Dr,Fremont,94539,510 453 3434,1998/2/23
+
+	2. Auto Somo:
+		Header - RSID,CHROMOSOME,POSITION,RESULT
+		A sample line is - "rs4477212","1","72017","AA"
+
+Please note that the "User Profile" line doesn't have the fields enclosed within quotes ("") but the "Auto Somo".  
+
+2.2. Output
+
+The program need to create a record of the following structure:
+	struct User 
+	{
+		char *	firstName ;
+		char *	lastName ;
+		char *	address ;
+		char *	city ;
+		char 	state[2] ;
+		char 	zip[5] ;
+		char 	dob[10] ;		
+	} ;
+
+	struct AutoSomo 
+	{
+		char *	rsID ;
+		char *	chromosome ;
+		int 	position ;
+		char 	result[2] ;
+	} ;
+
+3. Recognizing input
+
+	A token is the basic entity,  produced by the lexical analysis. 
+
+	1. Token
+		A token is a sequence of character, makes up an entity such as Name, zip code or date of birth.
+
+	2. Name/Symbol/Identifier 
+		A token, starting with alphabet or _.  The second and subsequent characters could be of alphabet, number or _
+
+	3. number
+		A token comprising number or . 
+
+	4. date
+		A token in the format of yyyy/mm/dd (4 digit year / 2 digit month / 2 digit date)
+
+
+
+
