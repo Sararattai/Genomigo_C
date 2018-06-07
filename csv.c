@@ -13,21 +13,20 @@ struct user;
 char firstname,lastname;
 int userId;
 int DOB;
+char p;
 char * token;
 FILE * pfile;
 pfile = open("user.csv","r"),
 if(pfile = NULL)
     printf("error in the file !!!");
-while(fgets(line,size of,pfile)!= NULL
+while(fgets(line,size of line,pfile)!= NULL)
       {
     p = line;
  while(*p)
-    if(*p == isalpha)
-    print("%c %c",firstname,lastname)
-    p++;
-    if(p = delimiter)
-    *p= null;
-    p++;
+    if(*p == delimiter)
+        p++;
+    else
+        continue;
 
 fclose();
 }
