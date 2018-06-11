@@ -54,10 +54,14 @@ void parseLine(char * linePtr)
 {
 	while (*linePtr)
 	{
-		if (isalpha(*linePtr))
+		if (isalpha(*linePtr) != char)
 		{
 			linePtr++;
 			printf("%c", *linePtr);
+		}
+		else
+		{
+			continue;
 		}
 
 	}
