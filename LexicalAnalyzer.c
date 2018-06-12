@@ -1,32 +1,26 @@
 #include<stdio.h>
 #include<stdlib.h> 
 #include<stdbool.h>
-#include<ctype.h>
-
-void parseLine(char * linePtr);
+#include<string.h>
+#include<espace.h>
 
 struct User
 {
 	char * firstName;
 	char * lastName;
 	int * DOB;
-	int * userId;
+	char * userId;
 };
 
 int main()
 {
-	struct user;
-	char firstName;
-	char lastName;
-	int userId;
-	int DOB;
-	char * linePtr;
-	char * token;
-	char line[400];
+	struct User;
+	int maxToken = 10;
+	char token[10];
 
 	FILE * userFile;
 
-	userFile = fopen("C:\\Users\\Saranya\\Development\\Genomigo_cpp\\Debug\\user.csv", "r");
+	userFile = fopen("C:\\Users\\Saranya\\Development\\Genomigo_cpp\\Genomigo_cpp\\user.csv", "r");
 
 	if (userFile == NULL)
 	{
@@ -37,32 +31,34 @@ int main()
 	while (true)
 	{
 		linePtr = fgets(line, sizeof(line), userFile);
+
 		if (linePtr == NULL)
 		{
 			break;
 		}
 
-		parseLine(linePtr);
-
+		parseLine(char * linePtr, char delimiter, char * tokens[], int maxToken);
+		char result = parseLine(linePtr, ';', tokens, maxToken);
+		printf("%d" token were found",result");
+		return 0;
 	}
-
-	fclose(userFile);
-	return 0;
-}
-
-void parseLine(char * linePtr)
-{
-	while (*linePtr)
+	int parseLine(char * linePtr, char delimiter, char * tokens[], int maxToken)
 	{
-		if (isalpha(*linePtr) != char)
+		char* srcStr = (char*)malloc(strlen(linePtr) + 1);
+		strcpy(srcStr, lineptr);
+		int strlen = 0;
+		int tokenCount = 0;
+		if (srcStr[strlen] != delimiter && scrStr[strlen] != '\0' && scrStr[strlen] != 'espace')
 		{
-			linePtr++;
-			printf("%c", *linePtr);
+			tokens[tokenCount] = char*malloc(size of(char) * strlen + 1);
+			tokens[tokenCount] = &scrStr[strlen];
+			tokenCount++;
 		}
 		else
 		{
-			continue;
+			strlen++;
 		}
 
+		fclose userFile;
+		return linePtr;
 	}
-}
